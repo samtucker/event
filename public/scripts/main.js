@@ -4,13 +4,27 @@ function inputValue() {
   // console.log(title);
 }
 
+function getUsername() {
+  return "x"
+}
+
+function getInvites(invitees) {
+  guestlist = {user: true,}
+  for (const guest of invitees) {
+    guestlist[guest] = false;
+  }
+}
+
 function saveEvent() {
   console.log("save event function")
     return firebase.firestore().collection('events').add({
+      user: getUsername(),
       title: title,
       description: description,
+      date: date,
       location: location,
-      dress: dress,
+      dresscode: dresscode,
+      invitess: getInvites();
       timestamp: firebase.firestore.FieldValue.serverTimestamp()
     }).catch(function(error) {
       console.error('Error writing new message to database', error);
@@ -36,7 +50,7 @@ function readEvents() {
         console.log(event.name)
       }
     })
-  }) 
+  })
 }
 
 
