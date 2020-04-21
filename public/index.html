@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="scripts/main.css">
+    <title>Sam Event</title>
+
+  </head>
+  <body>
+    <div>
+      <h3>events</h3>
+      <ol>
+          <li>
+              <div>
+                  <ul>
+                      <li>Title</li>
+                      <li>Place</li>
+                      <li>Dress Code</li>
+                      <li>Descriptoin</li>
+                  </ul>
+              </div>
+          </li>
+      </ol>
+  </div>
+
+  <div>
+      <h3>Create an Event</h3>
+      <form action="#">
+          <label>Event Title:</label>
+          <input type="text" id="title" autocomplete="off">
+          <label>Description</label>
+          <input type="text" id="description" autocomplete="off">
+          <label>Location:</label>
+          <input type="text" id="location" autocomplete="off">
+          <label>Date</label>
+          <input type="date" id="date" autocomplete="off">
+          <label>Invite Only</label>
+          <input type="checkbox">
+          <label>Dress Code:</label>
+          <input type="text" id="dress" autocomplete="off">
+          <button id="submit" type="submit">Send</button>
+      </form>
+  </div>
+
+
+  <script src="/__/firebase/7.13.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.13.0/firebase-auth.js"></script>
+  <script src="/__/firebase/7.13.0/firebase-storage.js"></script>
+  <script src="/__/firebase/7.13.0/firebase-messaging.js"></script>
+  <script src="/__/firebase/7.13.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/7.13.0/firebase-performance.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  
+  <script src="scripts/main.js"></script>
+  </body>
+</html>
